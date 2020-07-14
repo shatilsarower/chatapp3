@@ -1,9 +1,13 @@
+import 'package:chatapp/Screens/chat_screen.dart';
+import 'package:chatapp/Screens/login_screen.dart';
+import 'package:chatapp/Screens/registration_screen.dart';
+import 'package:chatapp/Screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'file:///home/shatil/AndroidStudioProjects/chatapp/screens/chat_screen.dart';
-import 'file:///home/shatil/AndroidStudioProjects/chatapp/screens/login_screen.dart';
-import 'file:///home/shatil/AndroidStudioProjects/chatapp/screens/registration_screen.dart';
-import 'file:///home/shatil/AndroidStudioProjects/chatapp/screens/welcome_screen.dart';
+import 'Screens/chat_screen.dart';
+import 'Screens/login_screen.dart';
+import 'Screens/registration_screen.dart';
+import 'Screens/welcome_screen.dart';
 
 void main() => runApp(Chatapp());
 

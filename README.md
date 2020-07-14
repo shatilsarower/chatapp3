@@ -1,6 +1,6 @@
 # chatapp
 
-A new Flutter application.
+A new Flutter application. Of mine , this project is based on Firebase for bacakend.
 
 ## Getting Started
 

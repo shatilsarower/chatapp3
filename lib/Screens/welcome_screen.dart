@@ -1,8 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 
-import 'file:///home/shatil/AndroidStudioProjects/chatapp/Components/round_button.dart';
-
+import '../Components/round_button.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
 
@@ -22,7 +21,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     super.initState();
     controller = AnimationController(
       duration: Duration(seconds: 3),
-      vsync: this,
+      value: this,
     );
     animation = CurvedAnimation(parent: controller, curve: Curves.bounceOut);
 

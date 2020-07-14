@@ -1,19 +1,18 @@
+import 'package:chatapp/Components/round_button.dart';
 import 'package:chatapp/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 
-import 'file:///home/shatil/AndroidStudioProjects/chatapp/Components/round_button.dart';
-
 import 'chat_screen.dart';
 
-class LoginScreen extends StatefulWidget {
-  static const String id = 'login_screen';
+class RegistrationScreen extends StatefulWidget {
+  static const String id = 'registration_screen';
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _RegistrationScreenState createState() => _RegistrationScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegistrationScreenState extends State<RegistrationScreen> {
   final _auth = FirebaseAuth.instance;
   String email;
   String password;
@@ -64,20 +63,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: KTextfieldDecoration.copyWith(
                     hintText: 'Enter your password'),
               ),
-              SizedBox(
-                height: 24.0,
-              ),
               RoundButton(
-                colour: Colors.lightBlueAccent,
-                title: 'Log in',
+                title: 'Register',
+                colour: Colors.blueAccent,
                 onPressed: () async {
                   setState(() {
                     showspinner = true;
                   });
                   try {
-                    final user = await _auth.signInWithEmailAndPassword(
+                    final newuser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
-                    if (user != null) {
+                    if (newuser != null) {
                       Navigator.pushNamed(context, ChatScreen.id);
                     }
                     setState(() {
